@@ -1,15 +1,29 @@
 import React from "react";
 import styles from "./tasks.module.css";
 
-const Tasks = () => {
+const Tasks = ({todos,delet}) => {
   // NOTE: do not delete `data-cy` key value pair
   return (
     <>
       <ul data-cy="tasks" className={styles.tasks}>
-        {/* Task List */}
+       
+    <p>{todos.map((e)=>{
+    return(
+      <p>
+    {e.value}
+    <button onClick={delet(e.value)}>Delete</button>
+    </p>
+    
+      
+    )
+  })
+    }
+    </p>
+     
+        
       </ul>
       <div data-cy="tasks-empty" className={styles.empty}>
-        {/* Show when No Tasks are present */}
+        
       </div>
     </>
   );
