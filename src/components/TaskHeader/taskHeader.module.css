@@ -1,3 +1,16 @@
 .taskHeader {
-  /* Sample */
+  background: white;
+  
+  padding: 10px;
+  line-height: 1.3;
+}
+h1{
+  font-size: 45px;
+  letter-spacing: 4px;
+}
+b{
+  font-size: 18px;
+}
+.Nancy{
+  font-size: 25px;
 }

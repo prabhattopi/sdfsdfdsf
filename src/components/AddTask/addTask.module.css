@@ -1,3 +1,40 @@
-.addTask {
-  /* Sample */
+.todoForm{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.lora{
+ width:80% ;
+ height: 40px;
+ padding: 10px;
+ outline: none;
+ border-radius:5px ;
+
+ -webkit-border-radius:5px ;
+ -moz-border-radius:5px ;
+ -ms-border-radius:5px ;
+ -o-border-radius:5px ;
+ border: 2px solid black;
+ border-right:0px ;
+ border-bottom-right-radius: 0px;
+ border-top-right-radius: 0px;
+ font-size: 18px;
+
+}
+.lora1{
+  width:20% ;
+  border-radius: 5px;
+  border: 2px solid black;
+  outline: none;
+ 
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-left: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  /*padding: 10px;
+  */font-size: 18px;
+  color: black;
 }

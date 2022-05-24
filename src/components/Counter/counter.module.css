@@ -1,3 +1,28 @@
 .counter {
-  /* TODO */
+  width: 50px;
+}
+.counter button:first-child{
+  position: absolute;
+ width: 28px;
+ margin-left: -30px;
+ height: 30px;
+ /* padding: 10px; */
+ text-align: center;
+ 
+}
+.counter button:last-child{
+  position: absolute;
+  height: 30px;
+  width: 28px;
+ 
+ 
+}
+.counter span{
+  position: relative;
+  border: 1px solid black;
+  /* width: 20px;
+  height: 18px; */
+  font-size: 25px;
+  border: none;
+  
 }

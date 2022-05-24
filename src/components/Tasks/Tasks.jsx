@@ -1,24 +1,18 @@
 import React from "react";
 import styles from "./tasks.module.css";
-
-const Tasks = ({todos,delet}) => {
+import Task from "../Task/Task";
+const Tasks = ({todos,deleteValue,todoss}) => {
   // NOTE: do not delete `data-cy` key value pair
   return (
     <>
       <ul data-cy="tasks" className={styles.tasks}>
        
-    <p>{todos.map((e)=>{
-    return(
-      <p>
-    {e.value}
-    <button onClick={delet(e.value)}>Delete</button>
-    </p>
+   
     
       
-    )
-  })
-    }
-    </p>
+    <Task todos={todos} deleteValue={deleteValue} count={todoss}/>
+    
+    
      
         
       </ul>

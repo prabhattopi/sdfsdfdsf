@@ -1,29 +1,32 @@
+
 import React,{useState} from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 import styles from "./taskApp.module.css";
-import  {Tasks}  from "./Tasks";
+import  Tasks  from "./Tasks/Tasks";
+import TaskHeader from "./TaskHeader/TaskHeader";
+import Task from "./Task/Task";
+import Counter from "./Counter/Counter";
+import AddTask from "./AddTask/AddTask";
 
 const TaskApp = () => {
-const [value, setValue] = useState("")
-const [todos, setTodos] = useState([])
-const delet=(ev)=>{
-  todos.filter(e=>(
-    
-    ev!=e.value
-  ))
  
+  
+
+  const [todos, setTodos] = useState([])
+  const addvalue=(value)=>{
+    setTodos([...todos,{
+      id:uuidv4(),
+      value:value
+
+
+    }])
+  }
+  const deleteValue=(xyz)=>{
+   setTodos(todos.filter((e)=>e.value!=xyz)
+   )
   }
 
-
-const addvalue=(xyz)=>{
-  
-  setTodos([...todos,
-  {
-    id:1,
-    value:xyz
-  }])
-
-}
 
 
 
@@ -31,15 +34,10 @@ const addvalue=(xyz)=>{
   // NOTE: do not delete `data-cy` key value pair
   return (
     <div data-cy="task-app" className={styles.taskApp}>
-    <h1>TodoApp</h1>
-    <h2>The number of 2 products out of three</h2>
-       <input type="text" onChange={(e)=>{
-setValue(e.target.value)
-       }} />
-       <button onClick={()=>{addvalue(value)
-      setValue("")}}>Add</button>
-      {/* Tasks */}
-      <Tasks todos={todos} delet={delet}/>
+     <TaskHeader todoss={todos.length}/>
+     <AddTask todos={todos} addvalue={addvalue}/>
+     <Tasks  todos={todos} deleteValue={deleteValue} todoss={todos.length}/>
+
     </div>
   );
 };
